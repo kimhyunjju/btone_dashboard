@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="중대산업재해 활선사고 관련 작업자 안전예방장치 개발">
+    <meta name="author" content="(주)비티원(BTONE)">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>안전재해예방 원격 모니터링 시스템</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+
+    <!-- Datetimepicker css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Datatable css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap4.css">
+    
+    <!-- Custom styles -->
+    <link  rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Site wrapper -->
+    <main class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Begin Include Header -->
+        <header class="header">
+            <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+                <a href="index.html" class="">
+                <h1 class="fs-24 fw-bold text-white">안전재해예방 원격 모니터링 시스템</h1>
+                </a>
+                <div class="d-flex flex-wrap">
+                    <div class="pt-2 mr-3">2024년 02월 28일 10시 11분 32초</div>
+                    <div class="dropdown notification">
+                        <a href="#" class="d-block position-relative dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell fs-24" class="rounded-circle"></i>
+                        </a>
+                        <span class="unread-notification"></span>
+                        <div class="dropdown-menu dropdown-menu-right y-scroll">
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">오늘 알림</span>
+                                    <a href="event-list.html" class="btn-link text-white">
+                                        전체 보기 <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                                <!-- No event -->
+                                <div class="no-msg" style="display: none;">
+                                    <span class="text-muted">발생한 이벤트가 없습니다.</span>
+                                </div>
+    
+                                <!-- Begin event message -->
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <!-- /.End event message -->
+                            </div>
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">이전 알림</span>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">모든 알림 삭제</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Global Navigation -->
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">
+                    <img src="assets/img/logo-sample.png" width="50" height="auto" alt="sample logo">
+                    <span>한국전력기술(주) 서울복합화력발전소</span>
+                </h2>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html">모니터링</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="work-list.html">작업 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location-list.html">구역/배전함 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="box-list.html">장비 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="worker-list.html">업체 관리</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.End Include Header -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="fs-20 fw-bold">작업 관리</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="" href="index.html">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span class="">홈</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="" href="work-list.html">
+                            <span class="">작업 관리</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        작업 상세
+                    </li>
+                </ol>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="col-8">
+                    <div class="card page-top-form">
+                        <div class="card-body py-4">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card page-top-form">
+                        <div class="card-body py-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="footer mt-auto py-3">
+            <div class="d-flex justify-content-end">
+                Copyright ⓒ 2024 <a href="http://www.bow-tech.co.kr/" target="_blank"> BTONE</a>.  All Rights Reserved.
+            </div>
+        </footer>
+        
+    </main>
+    <!-- ./wrapper -->
+
+
+    <!-- JS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendors/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datatable JS -->
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/custom.js"></script>  
+    
+</body>
+
+</html>

@@ -1,0 +1,501 @@
+
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="중대산업재해 활선사고 관련 작업자 안전예방장치 개발">
+    <meta name="author" content="(주)비티원(BTONE)">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>안전재해예방 원격 모니터링 시스템</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+
+    <!-- Datetimepicker css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Datatable css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap4.css">
+    
+    <!-- Custom styles -->
+    <link  rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Site wrapper -->
+    <main class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Begin Include Header -->
+        <header class="header">
+            <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+                <a href="index.html" class="">
+                <h1 class="fs-24 fw-bold text-white">안전재해예방 원격 모니터링 시스템</h1>
+                </a>
+                <div class="d-flex flex-wrap">
+                    <div class="pt-2 mr-3">2024년 02월 28일 10시 11분 32초</div>
+                    <div class="dropdown notification">
+                        <a href="#" class="d-block position-relative dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell fs-24" class="rounded-circle"></i>
+                        </a>
+                        <span class="unread-notification"></span>
+                        <div class="dropdown-menu dropdown-menu-right y-scroll">
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">오늘 알림</span>
+                                    <a href="event-list.html" class="btn-link text-white">
+                                        전체 보기 <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                                <!-- No event -->
+                                <div class="no-msg" style="display: none;">
+                                    <span class="text-muted">발생한 이벤트가 없습니다.</span>
+                                </div>
+    
+                                <!-- Begin event message -->
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <!-- /.End event message -->
+                            </div>
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">이전 알림</span>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">모든 알림 삭제</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Global Navigation -->
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">
+                    <img src="assets/img/logo-sample.png" width="50" height="auto" alt="sample logo">
+                    <span>한국전력기술(주) 서울복합화력발전소</span>
+                </h2>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html">모니터링</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="work-list.html">작업 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="location-list.html">구역/배전함 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="box-list.html">장비 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="worker-list.html">업체 관리</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.End Include Header -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="fs-20 fw-bold">
+                    <a href="location-list.html">
+                        <i class="bi bi-arrow-left"></i></a> 구역 상세
+                </h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="" href="index.html">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span class="">홈</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="" href="location-list.html">
+                            <span class="">구역/배전함 관리</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        구역 상세 
+                    </li>
+                </ol>
+            </div>
+            <div class="card page-top-form">
+                <div class="card-body px-5">
+                    <ul class="inline-list-group">
+                        <li class="list-style-disc">
+                            <span class="title">구역명</span>
+                            <span class="text-white fw-bold">1구역</span>
+                        </li>
+                        <li class="list-style-disc">
+                            <span class="title">위치</span>
+                            <span class="text-white fw-bold">1층 동쪽</span>
+                        </li>
+                        <li class="list-style-disc">
+                            <span class="title">배전함 수</span>
+                            <span class="text-white fw-bold"><span>5</span>대</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- table content -->
+            <div class="table-wrapper">
+                <div class="table-top-info">
+                    <div class="search-bar">
+                        <form action="">
+                            <div class="form-row">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="" class="sr-only">전체 검색</label>
+                                        <select id="" class="form-control">
+                                            <option value="" selected>전체</option>
+                                            <option value="">구역명</option>
+                                            <option value="">배전함 수</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="input-group">
+                                        <label for="" class="sr-only">전체 검색</label>
+                                        <input type="text" class="form-control" placeholder="검색어를 입력해 주세요">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" type="button" id="">
+                                                <i class="bi bi-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="btn-group">
+                        <a role="button" class="btn btn-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                        <a role="button" class="btn btn-primary" id="" data-toggle="modal" data-target="#applyModal">추가</a>
+                    </div>
+                </div>
+                <table id="example" class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="no-sort" style="width: 3%;">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="Allcheck">
+                                    <label class="custom-control-label" for="Allcheck"></label>
+                                </div>
+                            </th>
+                            <th style="width: 5%;">순번</th>
+                            <th>배전함 모델명</th>
+                            <th>터치패널 모델명</th>
+                            <th>터치패널 IP</th>
+                            <th>열화상카메라 이름</th>
+                            <th>열화상카메라 모델명</th>
+                            <th>열화상카메라 IP</th>
+                            <th>등록일</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                    <label class="custom-control-label" for="check1"></label>
+                                </div>
+                            </td>
+                            <td>5</td>
+                            <td>LBS-NO005</td>
+                            <td>PANEL_n1</td>
+                            <td>00-00-00-00-00</td>
+                            <td>카메라 A</td>
+                            <td>CAM_n1_c001</td>
+                            <td>00-00-00-00-00</td>
+                            <td>2024-02-13</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                    <label class="custom-control-label" for="check1"></label>
+                                </div>
+                            </td>
+                            <td>4</td>
+                            <td>LBS-NO005</td>
+                            <td>PANEL_n1</td>
+                            <td>00-00-00-00-00</td>
+                            <td>카메라 A</td>
+                            <td>CAM_n1_c001</td>
+                            <td>00-00-00-00-00</td>
+                            <td>2024-02-13</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                    <label class="custom-control-label" for="check1"></label>
+                                </div>
+                            </td>
+                            <td>3</td>
+                            <td>LBS-NO005</td>
+                            <td>PANEL_n1</td>
+                            <td>00-00-00-00-00</td>
+                            <td>카메라 A</td>
+                            <td>CAM_n1_c001</td>
+                            <td>00-00-00-00-00</td>
+                            <td>2024-02-13</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                    <label class="custom-control-label" for="check1"></label>
+                                </div>
+                            </td>
+                            <td>2</td>
+                            <td>LBS-NO005</td>
+                            <td>PANEL_n1</td>
+                            <td>00-00-00-00-00</td>
+                            <td>카메라 A</td>
+                            <td>CAM_n1_c001</td>
+                            <td>00-00-00-00-00</td>
+                            <td>2024-02-13</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                    <label class="custom-control-label" for="check1"></label>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>LBS-NO005</td>
+                            <td>PANEL_n1</td>
+                            <td>00-00-00-00-00</td>
+                            <td>카메라 A</td>
+                            <td>CAM_n1_c001</td>
+                            <td>00-00-00-00-00</td>
+                            <td>2024-02-13</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- No data -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="10" class="text-center">데이터가 없습니다.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.table content -->
+            <div class="page-bottom mb-4">
+                <div class="d-block">
+                    <a role="button" class="btn btn-secondary" id="" href="location-list.html">돌아가기</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="footer mt-auto py-3">
+            <div class="d-flex justify-content-end">
+                Copyright ⓒ 2024 <a href="http://www.bow-tech.co.kr/" target="_blank"> BTONE</a>.  All Rights Reserved.
+            </div>
+        </footer>
+        
+    </main>
+    <!-- ./wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">구역 등록/수정</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="text-left">
+                        <div class="form-group mb-4">
+                            <label for="">배전함</label>
+                            <select class="form-control" id="">
+                                <option selected>배전함 선택</option>
+                                <option value="">배전함 1</option>
+                                <option value="">배전함 2</option>
+                                <option value="">배전함 3</option>
+                            </select>
+                            <!-- 선택하지 않은 경우 -->
+                            <div class="invalid-feedback" style="display: block;">
+                                배전함을 선택해 주세요
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="">터치패드</label>
+                            <select class="form-control" id="">
+                                <option selected>터치패드 선택</option>
+                                <option value="">터치패드 1</option>
+                                <option value="">터치패드 2</option>
+                                <option value="">터치패드 3</option>
+                            </select>
+                            <!-- 선택하지 않은 경우 -->
+                            <div class="invalid-feedback" style="display: block;">
+                                터치패드를 선택해 주세요
+                            </div>
+                            <!-- 선택 후 IP 표시 -->
+                            <div class="alert alert-primary" role="alert">
+                                IP: <span>00-00-00-00-00</span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="">열화상 카메라</label>
+                            <select class="form-control" id="">
+                                <option selected>열화상 카메라 선택</option>
+                                <option value="">열화상 카메라 1</option>
+                                <option value="">열화상 카메라 2</option>
+                                <option value="">열화상 카메라 3</option>
+                            </select>
+                            <!-- 선택하지 않은 경우 -->
+                            <div class="invalid-feedback" style="display: block;">
+                                열화상 카메라를 선택해 주세요
+                            </div>
+                            <!-- 선택 후 IP 표시 -->
+                            <div class="alert alert-primary" role="alert">
+                                IP: <span>00-00-00-00-00</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                <a role="button" class="btn btn-primary" href="#">추가</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">배전함 삭제</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="bi bi-exclamation-triangle-fill fa-5x text-danger"></i>
+                    <p>선택하신 배전함 정보를 삭제합니다.<br>
+                        정말 삭제하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                <a role="button" class="btn btn-danger px-4" href="#">네</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./Modal -->
+
+
+    <!-- JS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendors/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datatable JS -->
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/custom.js"></script>  
+    
+</body>
+
+</html>

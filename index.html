@@ -1,0 +1,587 @@
+
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="중대산업재해 활선사고 관련 작업자 안전예방장치 개발">
+    <meta name="author" content="(주)비티원(BTONE)">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>안전재해예방 원격 모니터링 시스템</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+
+    <!-- Datetimepicker css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Datatable css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap4.css">
+    
+    <!-- Custom styles -->
+    <link  rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Site wrapper -->
+    <main class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Begin Toast -->
+        <div class="toast-container">
+            <div class="toast toast-danger" data-autohide="false">
+                <div class="toast-header">
+                    <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                    <div class="location">
+                        <span>1구역</span>
+                        <span>LBS-NO001</span>
+                    </div>
+                    <span class="text-muted">1분 전</span>
+                </div>
+            </div>
+            <div class="toast toast-info" data-autohide="false">
+                <div class="toast-header">
+                    <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                    <div class="location">
+                        <span>1구역</span>
+                        <span>LBS-NO001</span>
+                    </div>
+                    <span class="text-muted">1분 전</span>
+                </div>
+            </div>
+        </div>
+        <!-- /.End Toast -->
+        <!-- Begin Include Header -->
+        <header class="header">
+            <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+                <a href="index.html" class="">
+                <h1 class="fs-24 fw-bold text-white">안전재해예방 원격 모니터링 시스템</h1>
+                </a>
+                <div class="d-flex flex-wrap">
+                    <div class="pt-2 mr-3">2024년 02월 28일 10시 11분 32초</div>
+                    <div class="dropdown notification">
+                        <a href="#" class="d-block position-relative dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell fs-24" class="rounded-circle"></i>
+                        </a>
+                        <span class="unread-notification"></span>
+                        <div class="dropdown-menu dropdown-menu-right y-scroll">
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">오늘 알림</span>
+                                    <a href="event-list.html" class="btn-link text-white">
+                                        전체 보기 <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                                <!-- No event -->
+                                <div class="no-msg" style="display: none;">
+                                    <span class="text-muted">발생한 이벤트가 없습니다.</span>
+                                </div>
+                                <!-- Begin event message -->
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <!-- /.End event message -->
+                            </div>
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">이전 알림</span>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">모든 알림 삭제</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Global Navigation -->
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">
+                    <img src="assets/img/logo-sample.png" width="50" height="auto" alt="sample logo">
+                    <span>한국전력기술(주) 서울복합화력발전소</span>
+                </h2>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">모니터링</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="work-list.html">작업 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location-list.html">구역/배전함 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="box-list.html">장비 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="worker-list.html">업체 관리</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.End Include Header -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="fs-20 fw-bold">모니터링</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="">모니터링</span>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- card content -->
+            <section class="card-container">
+                <div class="tabs-group">
+                    <button type="button" id="left" class="left scroller-btn">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <ul id="scroller" class="nav nav-tabs">
+                        <li><a class="nav-link active" data-toggle="tab" href="#tab1">구역 전체</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab2">구역 1</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab3">구역 2</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab4">구역 3</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab5">구역 4</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab6">구역 5</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab7">구역 6</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab8">구역 7</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab9">구역 8</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab10">구역 9</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab11">구역 10</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab12">구역 11</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab13">구역 12</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab14">구역 13</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab15">구역 14</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab16">구역 15</a></li>
+                    </ul>
+                    <button type="button" id="right" class="right scroller-btn">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div id="tab1" class="card-group y-scroll">
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-danger">위험(활선)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-danger">위험(활선)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-danger">위험(활선)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="btn-floating" data-toggle="modal" data-target="#viewVideo">
+                            <i class="bi bi-plus-circle fa-3x"></i>
+                        </a>
+                        <img src="assets/img/live-sample.png" class="card-img-top" alt="live thumbnail">
+                        <a class="card-body overlay" href="#">
+                            <div class="me-auto">
+                                <span class="badge badge-safety">안전(휴전)</span>
+                                <div class="mt-1">LBS-NO001</div>
+                            </div>
+                            <i class="bi bi-arrow-right-circle fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- /card content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="footer mt-auto py-3">
+            <div class="d-flex justify-content-end">
+                Copyright ⓒ 2024 <a class="px-1" href="http://www.bow-tech.co.kr/" target="_blank"> BTONE</a>.  All Rights Reserved.
+            </div>
+        </footer>
+        
+    </main>
+    <!-- ./wrapper -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="viewVideo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">영상 보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card mb-4">
+                    <div class="card-body px-5">
+                        <ul class="inline-list-group">
+                            <li class="list-style-disc">
+                                <span class="title">위치</span>
+                                <span class="text-white fw-bold">1구역</span>
+                            </li>
+                            <li class="list-style-disc">
+                                <span class="title">배전함명</span>
+                                <span class="text-white fw-bold">LBS-NO001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="embed-container">
+                    <!-- view option-->
+                    <div class="floating-select">
+                        <div class="mb-4">
+                            <label for="" class="sr-only">전체 보기</label>
+                            <select class="form-control" id="">
+                                <option selected="">전체 보기</option>
+                                <option value="">2분할</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="floating-thumb shadow-sm">
+                        <!-- Real working video area -->
+                    </div>
+                    <!-- 4:3 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-4by3 rounded">
+                        <iframe class="embed-responsive-item" src="...">
+                            <!-- Thermal video area -->
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <a role="button" class="btn btn-primary" href="#" >상세보기</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./Modal -->
+
+    
+    <!-- JS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendors/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datatable JS -->
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/custom.js"></script>   
+
+</body>
+
+</html>

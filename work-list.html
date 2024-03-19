@@ -1,0 +1,463 @@
+
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="중대산업재해 활선사고 관련 작업자 안전예방장치 개발">
+    <meta name="author" content="(주)비티원(BTONE)">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>안전재해예방 원격 모니터링 시스템</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+
+    <!-- Datetimepicker css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Datatable css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap4.css">
+    
+    <!-- Custom styles -->
+    <link  rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Site wrapper -->
+    <main class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Begin Include Header -->
+        <header class="header">
+            <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+                <a href="index.html" class="">
+                <h1 class="fs-24 fw-bold text-white">안전재해예방 원격 모니터링 시스템</h1>
+                </a>
+                <div class="d-flex flex-wrap">
+                    <div class="pt-2 mr-3">2024년 02월 28일 10시 11분 32초</div>
+                    <div class="dropdown notification">
+                        <a href="#" class="d-block position-relative dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell fs-24" class="rounded-circle"></i>
+                        </a>
+                        <span class="unread-notification"></span>
+                        <div class="dropdown-menu dropdown-menu-right y-scroll">
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">오늘 알림</span>
+                                    <a href="event-list.html" class="btn-link text-white">
+                                        전체 보기 <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                                <!-- No event -->
+                                <div class="no-msg" style="display: none;">
+                                    <span class="text-muted">발생한 이벤트가 없습니다.</span>
+                                </div>
+    
+                                <!-- Begin event message -->
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <!-- /.End event message -->
+                            </div>
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">이전 알림</span>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">모든 알림 삭제</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Global Navigation -->
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">
+                    <img src="assets/img/logo-sample.png" width="50" height="auto" alt="sample logo">
+                    <span>한국전력기술(주) 서울복합화력발전소</span>
+                </h2>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html">모니터링</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="work-list.html">작업 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location-list.html">구역/배전함 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="box-list.html">장비 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="worker-list.html">업체 관리</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.End Include Header -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="fs-20 fw-bold">작업 관리</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="" href="index.html">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span class="">홈</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        작업 관리
+                    </li>
+                </ol>
+            </div>
+            <div class="card page-top-form">
+                <div class="card-body py-4">
+                    <form action="">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div class="form-row col-7">
+                                <div class="form-group col-2">
+                                    <label for="" class="sr-only">구역 선택</label>
+                                    <select id="" class="form-control">
+                                        <option value="" selected>구역 전체</option>
+                                        <option value="">구역1</option>
+                                        <option value="">구역2</option>
+                                        <option value="">구역3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-2">
+                                    <label for="" class="sr-only">배전함 선택</label>
+                                    <select id="" class="form-control">
+                                        <option value="" selected>작업 전체</option>
+                                        <option value="">유지보수</option>
+                                        <option value="">기타</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-2">
+                                    <label for="" class="sr-only">상태 선택</label>
+                                    <select id="" class="form-control">
+                                        <option value="" selected>상태 전체</option>
+                                        <option value="">작업대기</option>
+                                        <option value="">작업중</option>
+                                        <option value="">작업완료</option>
+                                    </select>
+                                </div>   
+                                <div class="form-group col-6">
+                                    <label for="" class="sr-only">검색어</label>
+                                    <input id="" class="form-control" type="text" placeholder="검색어를 입력해 주세요">
+                                </div>
+                            </div>
+                            <div class="form-row col-5">
+                                <div class="form-group col-5">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon2">
+                                                <i class="bi bi-calendar4-week"></i>
+                                            </span>
+                                        </div>
+                                        <label for="datetimepicker1" class="sr-only">시작일</label>
+                                        <input id="datetimepicker1" class="form-control" type="text" placeholder="시작일">
+                                    </div>
+                                </div>
+                                <div class="form-group col-5">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon2">
+                                                <i class="bi bi-calendar4-week"></i>
+                                            </span>
+                                        </div>
+                                        <label for="datetimepicker1" class="sr-only">종료일</label>
+                                        <input id="datetimepicker1" class="form-control" type="text" placeholder="종료일">
+                                    </div>
+                                </div>
+                                <div class="form-group col-2">
+                                    <button type="button" class="btn btn-dark" id="">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- table content -->
+            <div class="table-wrapper">
+                <div class="table-top-info">
+                    <div class="count">총 <b>123</b> 건</div>
+                    <div class="btn-group">
+                        <a role="button" class="btn btn-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                        <a role="button" class="btn btn-primary" id="" href="work-apply.html">등록</a>
+                    </div>
+                </div>
+                <table id="example" class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="no-sort" style="width: 3%;">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="Allcheck">
+                                    <label class="custom-control-label" for="Allcheck"></label>
+                                </div>
+                            </th>
+                            <th style="width: 5%;">순번</th>
+                            <th>작업No.</th>
+                            <th>구역</th>
+                            <th>작업구분</th>
+                            <th>작업자1</th>
+                            <th>작업자2</th>
+                            <th>작업자3</th>
+                            <th>작업시작일시</th>
+                            <th>작업종료일시</th>
+                            <th>상태</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                    <label class="custom-control-label" for="check1"></label>
+                                </div>
+                            </td>
+                            <td>5</td>
+                            <td><a href="work-detail.html" class="btn-link">MNG_240227_010</a></td>
+                            <td>1구역</td>
+                            <td>유지보수</td>
+                            <td>김작업</td>
+                            <td>이작업</td>
+                            <td>-</td>
+                            <td>2024-02-13 14:25</td>
+                            <td>2024-02-13 18:00 </td>
+                            <td>작업대기</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                                <!-- 작업대기 상태만 수정 버튼 활성화 [hidden] attribute -->
+                                <a role="button" class="btn btn-xs btn-outline-primary" id="" href="work-apply.html" >수정</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check2">
+                                    <label class="custom-control-label" for="check2"></label>
+                                </div>
+                            </td>
+                            <td>4</td>
+                            <td><a href="work-detail.html" class="btn-link">MNG_240227_010</a></td>
+                            <td>1구역</td>
+                            <td>유지보수</td>
+                            <td>김작업</td>
+                            <td>이작업</td>
+                            <td>-</td>
+                            <td>2024-02-13 14:25</td>
+                            <td>2024-02-13 18:00 </td>
+                            <td>작업중</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                                <!-- 작업대기 상태만 수정 버튼 활성화 [hidden] attribute -->
+                                <a role="button" class="btn btn-xs btn-outline-primary" id="" href="work-edit.html" hidden>수정</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check3">
+                                    <label class="custom-control-label" for="check3"></label>
+                                </div>
+                            </td>
+                            <td>3</td>
+                            <td><a href="work-detail.html" class="btn-link">MNG_240227_010</a></td>
+                            <td>1구역</td>
+                            <td>유지보수</td>
+                            <td>김작업</td>
+                            <td>이작업</td>
+                            <td>박작업</td>
+                            <td>2024-02-13 14:25</td>
+                            <td>2024-02-13 18:00 </td>
+                            <td>작업중</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                                <!-- 작업대기 상태만 수정 버튼 활성화 [hidden] attribute -->
+                                <a role="button" class="btn btn-xs btn-outline-primary" id="" href="work-edit.html" hidden>수정</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check3">
+                                    <label class="custom-control-label" for="check3"></label>
+                                </div>
+                            </td>
+                            <td>2</td>
+                            <td><a href="work-detail.html" class="btn-link">MNG_240227_010</a></td>
+                            <td>1구역</td>
+                            <td>유지보수</td>
+                            <td>김작업</td>
+                            <td>이작업</td>
+                            <td>박작업</td>
+                            <td>2024-02-13 14:25</td>
+                            <td>2024-02-13 18:00 </td>
+                            <td>작업완료</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                                <!-- 작업대기 상태만 수정 버튼 활성화 [hidden] attribute -->
+                                <a role="button" class="btn btn-xs btn-outline-primary" id="" href="work-edit.html" hidden>수정</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="no-sort">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check3">
+                                    <label class="custom-control-label" for="check3"></label>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td><a href="work-detail.html" class="btn-link">MNG_240227_010</a></td>
+                            <td>1구역</td>
+                            <td>유지보수</td>
+                            <td>김작업</td>
+                            <td>이작업</td>
+                            <td>박작업</td>
+                            <td>2024-02-13 14:25</td>
+                            <td>2024-02-13 18:00 </td>
+                            <td>작업완료</td>
+                            <td>
+                                <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModal">삭제</a>
+                                <!-- 작업대기 상태만 수정 버튼 활성화 [hidden] attribute -->
+                                <a role="button" class="btn btn-xs btn-outline-primary" id="" href="work-edit.html" hidden>수정</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- No data -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="12" class="text-center">데이터가 없습니다.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.table content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="footer mt-auto py-3">
+            <div class="d-flex justify-content-end">
+                Copyright ⓒ 2024 <a href="http://www.bow-tech.co.kr/" target="_blank"> BTONE</a>.  All Rights Reserved.
+            </div>
+        </footer>
+        
+    </main>
+    <!-- ./wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">작업 삭제</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="bi bi-exclamation-triangle-fill fa-5x text-danger"></i>
+                    <p>선택하신 작업 정보를 삭제합니다.<br>
+                        정말 삭제하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                <a role="button" class="btn btn-danger px-4" href="#">네</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./Modal -->
+
+
+    <!-- JS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendors/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datatable JS -->
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/custom.js"></script>  
+    
+</body>
+
+</html>

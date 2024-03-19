@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="중대산업재해 활선사고 관련 작업자 안전예방장치 개발">
+    <meta name="author" content="(주)비티원(BTONE)">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>안전재해예방 원격 모니터링 시스템</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+
+    <!-- Datetimepicker css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Datatable css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap4.css">
+    
+    <!-- Custom styles -->
+    <link  rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Site wrapper -->
+    <main class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Begin Include Header -->
+        <header class="header">
+            <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+                <a href="index.html" class="">
+                <h1 class="fs-24 fw-bold text-white">안전재해예방 원격 모니터링 시스템</h1>
+                </a>
+                <div class="d-flex flex-wrap">
+                    <div class="pt-2 mr-3">2024년 02월 28일 10시 11분 32초</div>
+                    <div class="dropdown notification">
+                        <a href="#" class="d-block position-relative dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell fs-24" class="rounded-circle"></i>
+                        </a>
+                        <span class="unread-notification"></span>
+                        <div class="dropdown-menu dropdown-menu-right y-scroll">
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">오늘 알림</span>
+                                    <a href="event-list.html" class="btn-link text-white">
+                                        전체 보기 <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                                <!-- No event -->
+                                <div class="no-msg" style="display: none;">
+                                    <span class="text-muted">발생한 이벤트가 없습니다.</span>
+                                </div>
+    
+                                <!-- Begin event message -->
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <!-- /.End event message -->
+                            </div>
+                            <div class="toast-group mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="toast-label">이전 알림</span>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-danger" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                                <div class="toast toast-info" data-autohide="false">
+                                    <div class="toast-header">
+                                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                    </div>
+                                    <div class="toast-body">
+                                        <div class="location">
+                                            <span>1구역</span>
+                                            <span>LBS-NO001</span>
+                                        </div>
+                                        <span class="text-muted">1분 전</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">모든 알림 삭제</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Global Navigation -->
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">
+                    <img src="assets/img/logo-sample.png" width="50" height="auto" alt="sample logo">
+                    <span>한국전력기술(주) 서울복합화력발전소</span>
+                </h2>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html">모니터링</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="work-list.html">작업 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location-list.html">구역/배전함 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="box-list.html">장비 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="worker-list.html">업체 관리</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.End Include Header -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="fs-20 fw-bold">작업 등록</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="" href="index.html">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span class="">홈</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="" href="work-list.html">
+                            <span class="">작업 관리</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        작업 등록
+                    </li>
+                </ol>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body px-5">
+                    <ul class="inline-list-group">
+                        <li class="list-style-disc">
+                            <span class="title">작업 No.</span>
+                            <span class="text-white fw-bold">MNG-240227-001</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- apply content -->
+            <div class="card mb-3">
+                <div class="card-body px-5 py-5">
+                    <form action="">
+                        <div class="row justify-content-around">
+                            <div class="col-5 col-xl-4">
+                                <div class="form-group mb-4">
+                                    <label for="">구역</label>
+                                    <select class="form-control" id="">
+                                        <option selected>구역 선택</option>
+                                        <option value="">구역1</option>
+                                        <option value="">구역2</option>
+                                        <option value="">구역2</option>
+                                    </select>
+                                    <div class="invalid-feedback" style="display: block;">
+                                        구역을 선택해 주세요
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="">배전함 (0)</label>
+                                    <div class="card apply-box y-scroll">
+                                        <div class="card-body px-0 py-0">
+                                            <div class="empty-msg">구역을 선택하시면<br>
+                                                배전함 목록이 자동으로 추가됩니다.</div>
+                                            <div class="table-wrapper">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>번호</th>
+                                                            <th>배전함명</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>001</td>
+                                                            <td>LBS-NO001</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001</td>
+                                                            <td>LBS-NO001</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001</td>
+                                                            <td>LBS-NO001</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001</td>
+                                                            <td>LBS-NO001</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001</td>
+                                                            <td>LBS-NO001</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <div class="form-control-label mb-2">작업일시</div>
+                                    <div class="form-row">
+                                        <div class="input-group col">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon2">
+                                                    <i class="bi bi-calendar4-week"></i>
+                                                </span>
+                                            </div>
+                                            <label for="datetimepicker1" class="sr-only">시작일시</label>
+                                            <input id="datetimepicker1" class="form-control" type="text" placeholder="시작일시">
+                                            <div class="invalid-feedback" style="display: block;">
+                                                시작일시를 선택해 주세요
+                                            </div>
+                                        </div>
+                                        <div class="input-group col">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon2">
+                                                    <i class="bi bi-calendar4-week"></i>
+                                                </span>
+                                            </div>
+                                            <label for="datetimepicker1" class="sr-only">종료일시</label>
+                                            <input id="datetimepicker1" class="form-control" type="text" placeholder="종료일시">
+                                            <div class="invalid-feedback" style="display: block;">
+                                                종료일시를 선택해 주세요
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5 col-xl-4">
+                                <div class="form-group mb-2">
+                                    <label for="">작업 구분</label>
+                                    <select class="form-control" id="">
+                                        <option value="">유지보수</option>
+                                        <option value="">기타</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="" class="sr-only">작업 내용</label>
+                                    <textarea name="" id="" rows="3" class="form-control" placeholder="작업 내용을 입력해 주세요"></textarea>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="">업체/작업자</label>
+                                    <select class="form-control" id="">
+                                        <option selected>업체 선택</option>
+                                        <option value="">업체1</option>
+                                        <option value="">업체2</option>
+                                        <option value="">업체3</option>
+                                    </select>
+                                    <div class="invalid-feedback" style="display: block;">
+                                        업체를 선택해 주세요
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4 select-worker-list">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="">작업자1</label>
+                                        </div>
+                                        <select class="form-control" id="">
+                                            <option selected>직원 선택</option>
+                                            <option value="">김작업</option>
+                                            <option value="">이작업</option>
+                                            <option value="">박작업</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="">작업자2</label>
+                                        </div>
+                                        <select class="form-control" id="">
+                                            <option selected>직원 선택</option>
+                                            <option value="">김작업</option>
+                                            <option value="">이작업</option>
+                                            <option value="">박작업</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="">작업자3</label>
+                                        </div>
+                                        <select class="form-control" id="">
+                                            <option selected>직원 선택</option>
+                                            <option value="">김작업</option>
+                                            <option value="">이작업</option>
+                                            <option value="">박작업</option>
+                                        </select>
+                                    </div>
+                                    <div class="invalid-feedback" style="display: block;">
+                                        작업자를 선택해 주세요
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <div class="form-control-label mb-2">안전장구 승인 설정</div>
+                                    <input type="checkbox" id="toggle" class="toggleCheckbox" checked>
+                                    <label for="toggle" class='toggleContainer'>
+                                        <span>수동</span>   
+                                        <span>자동</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="page-bottom mb-4">
+                <div class="d-block">
+                    <a role="button" class="btn btn-secondary" id="" data-toggle="modal" data-target="#cancelModal">취소</a>
+                    <a role="button" class="btn btn-primary" id=""  data-toggle="modal" data-target="#applyModal">등록/수정</a>
+                </div>
+            </div>
+            <!-- /.apply content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="footer mt-auto py-3">
+            <div class="d-flex justify-content-end">
+                Copyright ⓒ 2024 <a href="http://www.bow-tech.co.kr/" target="_blank"> BTONE</a>.  All Rights Reserved.
+            </div>
+        </footer>
+        
+    </main>
+    <!-- ./wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">작업 등록</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="bi bi-check-circle-fill fa-5x text-primary"></i>
+                    <p>입력하신 작업 정보로<br>
+                        등록/수정 하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                <a role="button" class="btn btn-primary px-4" href="#">네</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cancelModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">작업 등록 취소</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="bi bi-x-octagon-fill fa-5x text-secondary"></i>
+                    <p>작업 등록/수정을<br>
+                        취소하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                <a role="button" class="btn btn-primary px-4" href="#">네</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./Modal -->
+
+
+    <!-- JS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendors/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datatable JS -->
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/custom.js"></script>    
+    
+</body>
+
+</html>
