@@ -1,0 +1,1011 @@
+
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="중대산업재해 활선사고 관련 작업자 안전예방장치 개발">
+    <meta name="author" content="(주)비티원(BTONE)">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>안전재해예방 원격 모니터링 시스템</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+
+    <!-- Datetimepicker css -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    
+    <!-- Datatable css -->
+    <link rel="stylesheet" href="assets/vendors/dataTables-2.0.2/datatables.min.css">
+    
+    <!-- Custom styles -->
+    <link  rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Begin Include Header -->
+    <header class="header">
+        <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+            <a href="index.html" class="">
+            <h1 class="fs-24 fw-bold text-white">안전재해예방 원격 모니터링 시스템</h1>
+            </a>
+            <div class="d-flex flex-wrap">
+                <div class="pt-2 mr-3">2024년 02월 28일 10시 11분 32초</div>
+                <div class="dropdown notification">
+                    <a href="#" class="d-block position-relative dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-bell fs-24" class="rounded-circle"></i>
+                    </a>
+                    <span class="unread-notification"></span>
+                    <div class="dropdown-menu dropdown-menu-right y-scroll">
+                        <div class="toast-group mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="toast-label">오늘 알림</span>
+                                <a href="event-list.html" class="btn-link text-white">
+                                    전체 보기 <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                            <!-- No event -->
+                            <div class="no-msg" style="display: none;">
+                                <span class="text-muted">발생한 이벤트가 없습니다.</span>
+                            </div>
+
+                            <!-- Begin event message -->
+                            <div class="toast toast-danger" data-autohide="false">
+                                <div class="toast-header">
+                                    <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                </div>
+                                <div class="toast-body">
+                                    <div class="location">
+                                        <span>1구역</span>
+                                        <span>LBS-NO001</span>
+                                    </div>
+                                    <span class="text-muted">1분 전</span>
+                                </div>
+                            </div>
+                            <div class="toast toast-info" data-autohide="false">
+                                <div class="toast-header">
+                                    <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                </div>
+                                <div class="toast-body">
+                                    <div class="location">
+                                        <span>1구역</span>
+                                        <span>LBS-NO001</span>
+                                    </div>
+                                    <span class="text-muted">1분 전</span>
+                                </div>
+                            </div>
+                            <!-- /.End event message -->
+                        </div>
+                        <div class="toast-group mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="toast-label">이전 알림</span>
+                            </div>
+                            <div class="toast toast-danger" data-autohide="false">
+                                <div class="toast-header">
+                                    <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                </div>
+                                <div class="toast-body">
+                                    <div class="location">
+                                        <span>1구역</span>
+                                        <span>LBS-NO001</span>
+                                    </div>
+                                    <span class="text-muted">1분 전</span>
+                                </div>
+                            </div>
+                            <div class="toast toast-danger" data-autohide="false">
+                                <div class="toast-header">
+                                    <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                </div>
+                                <div class="toast-body">
+                                    <div class="location">
+                                        <span>1구역</span>
+                                        <span>LBS-NO001</span>
+                                    </div>
+                                    <span class="text-muted">1분 전</span>
+                                </div>
+                            </div>
+                            <div class="toast toast-info" data-autohide="false">
+                                <div class="toast-header">
+                                    <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                                </div>
+                                <div class="toast-body">
+                                    <div class="location">
+                                        <span>1구역</span>
+                                        <span>LBS-NO001</span>
+                                    </div>
+                                    <span class="text-muted">1분 전</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">모든 알림 삭제</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /.End Include Header -->
+    <!-- Site wrapper -->
+    <main class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Global Navigation -->
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <h2 class="navbar-brand">
+                    <img src="assets/img/logo-sample.png" width="50" height="auto" alt="sample logo">
+                    <span>한국전력기술(주) 서울복합화력발전소</span>
+                </h2>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html">모니터링</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="work-list.html">작업 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location-list.html">구역/배전함 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="box-list.html">장비 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="worker-list.html">업체 관리</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <ul class="nav nav-tabs nav-justified mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="box" data-toggle="pill" href="#tabs1" type="button" role="tab" aria-controls="tabs1" aria-selected="true">
+                        배전함 관리
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="panel" data-toggle="pill" href="#tabs2" type="button" role="tab" aria-controls="tabs2" aria-selected="false">
+                        터치패널 관리
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="camera" data-toggle="pill" href="#tabs3" type="button" role="tab" aria-controls="tabs3" aria-selected="false">
+                        열화상 카메라 관리
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content" id="">
+                <!-- tab1: 배전함 관리 -->
+                <div class="tab-pane fade show active" id="tabs1" role="tabpanel" aria-labelledby="box">
+                    <div class="page-header">
+                        <h3 class="fs-20 fw-bold">배전함 관리</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a class="" href="index.html">
+                                    <i class="bi bi-house-door-fill"></i>
+                                    <span class="">홈</span>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item ">
+                                <a class="" href="box-list.html">장비 관리 </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                배전함 관리
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="card page-top-form">
+                        <div class="card-body py-4">
+                            <form action="">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div class="form-row col-7">
+                                        <div class="form-group col-3">
+                                            <label for="" class="sr-only">전체 검색</label>
+                                            <select id="" class="form-control">
+                                                <option value="" selected>전체</option>
+                                                <option value="">배전함 번호</option>
+                                                <option value="">배전함 모델명</option>
+                                                <option value="">제어 설정</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-9">
+                                            <label for="" class="sr-only">검색어</label>
+                                            <input id="" class="form-control" type="text" placeholder="검색어를 입력해 주세요">
+                                        </div>
+                                    </div>
+                                    <div class="form-row col-5">
+                                        <div class="form-group col-5">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon2">
+                                                        <i class="bi bi-calendar4-week"></i>
+                                                    </span>
+                                                </div>
+                                                <label for="datetimepicker1" class="sr-only">시작일</label>
+                                                <input id="datetimepicker1" class="form-control" type="text" placeholder="시작일">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-5">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon2">
+                                                        <i class="bi bi-calendar4-week"></i>
+                                                    </span>
+                                                </div>
+                                                <label for="datetimepicker1" class="sr-only">종료일</label>
+                                                <input id="datetimepicker1" class="form-control" type="text" placeholder="종료일">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-2">
+                                            <button type="button" class="btn btn-dark" id="">검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- table content -->
+                    <div class="table-wrapper">
+                        <div class="table-top-info">
+                            <div class="count">총 <b>123</b> 건</div>
+                            <div class="btn-group">
+                                <a role="button" class="btn btn-danger" id="" data-toggle="modal" data-target="#deleteModalBox">삭제</a>
+                                <a role="button" class="btn btn-primary" id="" data-toggle="modal" data-target="#applyModalBox">등록</a>
+                            </div>
+                        </div>
+                        <table id="example" class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="no-sort" style="width: 3%;">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Allcheck">
+                                            <label class="custom-control-label" for="Allcheck"></label>
+                                        </div>
+                                    </th>
+                                    <th style="width: 5%;">순번</th>
+                                    <th>배전함 번호</th>
+                                    <th>배전함 모델명</th>
+                                    <th>제어 설정</th>
+                                    <th>등록일</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>5</td>
+                                    <td>001</td>
+                                    <td>LBS-NO001</td>
+                                    <td>자동열림</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalBox">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalBox">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>4</td>
+                                    <td>001</td>
+                                    <td>LBS-NO001</td>
+                                    <td>수동열림</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalBox">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalBox">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>3</td>
+                                    <td>001</td>
+                                    <td>LBS-NO001</td>
+                                    <td>수동열림</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalBox">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalBox">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>2</td>
+                                    <td>001</td>
+                                    <td>LBS-NO001</td>
+                                    <td>자동열림</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalBox">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalBox">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td>001</td>
+                                    <td>LBS-NO001</td>
+                                    <td>자동열림</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalBox">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalBox">수정</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <!-- No data -->
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7" class="text-center">데이터가 없습니다.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.table content -->
+                </div>
+                <!-- tab2: 터치패널 관리 -->
+                <div class="tab-pane fade" id="tabs2" role="tabpanel" aria-labelledby="panel">
+                    <div class="page-header">
+                        <h3 class="fs-20 fw-bold">터치패널 관리</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a class="" href="index.html">
+                                    <i class="bi bi-house-door-fill"></i>
+                                    <span class="">홈</span>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item ">
+                                <a class="" href="box-list.html">장비 관리 </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                터치패널 관리 
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="card page-top-form">
+                        <div class="card-body py-4">
+                            <form action="">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div class="form-row col-7">
+                                        <div class="form-group col-3">
+                                            <label for="" class="sr-only">전체 검색</label>
+                                            <select id="" class="form-control">
+                                                <option value="" selected>전체</option>
+                                                <option value="">터치패널 번호</option>
+                                                <option value="">터치패널 모델명</option>
+                                                <option value="">터치패널 IP</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-9">
+                                            <label for="" class="sr-only">검색어</label>
+                                            <input id="" class="form-control" type="text" placeholder="검색어를 입력해 주세요">
+                                        </div>
+                                    </div>
+                                    <div class="form-row col-5">
+                                        <div class="form-group col-5">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon2">
+                                                        <i class="bi bi-calendar4-week"></i>
+                                                    </span>
+                                                </div>
+                                                <label for="datetimepicker1" class="sr-only">시작일</label>
+                                                <input id="datetimepicker1" class="form-control" type="text" placeholder="시작일">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-5">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon2">
+                                                        <i class="bi bi-calendar4-week"></i>
+                                                    </span>
+                                                </div>
+                                                <label for="datetimepicker1" class="sr-only">종료일</label>
+                                                <input id="datetimepicker1" class="form-control" type="text" placeholder="종료일">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-2">
+                                            <button type="button" class="btn btn-dark" id="">검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- table content -->
+                    <div class="table-wrapper">
+                        <div class="table-top-info">
+                            <div class="count">총 <b>123</b> 건</div>
+                            <div class="btn-group">
+                                <a role="button" class="btn btn-danger" id="" data-toggle="modal" data-target="#deleteModalPanel">삭제</a>
+                                <a role="button" class="btn btn-primary" id="" data-toggle="modal" data-target="#applyModalPanel">등록</a>
+                            </div>
+                        </div>
+                        <table id="example" class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="no-sort" style="width: 3%;">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Allcheck">
+                                            <label class="custom-control-label" for="Allcheck"></label>
+                                        </div>
+                                    </th>
+                                    <th style="width: 5%;">순번</th>
+                                    <th>터치패널 번호</th>
+                                    <th>터치패널 모델명</th>
+                                    <th>터치패널 IP</th>
+                                    <th>등록일</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>5</td>
+                                    <td>001</td>
+                                    <td>PANEL-NO001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalPanel">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalPanel">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>4</td>
+                                    <td>001</td>
+                                    <td>PANEL-NO001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalPanel">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalPanel">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>3</td>
+                                    <td>001</td>
+                                    <td>PANEL-NO001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalPanel">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalPanel">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>2</td>
+                                    <td>001</td>
+                                    <td>PANEL-NO001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalPanel">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalPanel">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td>001</td>
+                                    <td>PANEL-NO001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalPanel">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalPanel">수정</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <!-- No data -->
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7" class="text-center">데이터가 없습니다.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.table content -->
+                </div>
+                <!-- tab3: 열화상카메라 관리 -->
+                <div class="tab-pane fade" id="tabs3" role="tabpanel" aria-labelledby="camera">
+                    <div class="page-header">
+                        <h3 class="fs-20 fw-bold">열화상 카메라 관리</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a class="" href="index.html">
+                                    <i class="bi bi-house-door-fill"></i>
+                                    <span class="">홈</span>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a class="" href="box-list.html">장비 관리 </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                열화상 카메라 관리 
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="card page-top-form">
+                        <div class="card-body py-4">
+                            <form action="">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div class="form-row col-7">
+                                        <div class="form-group col-3">
+                                            <label for="" class="sr-only">전체 검색</label>
+                                            <select id="" class="form-control">
+                                                <option value="" selected>전체</option>
+                                                <option value="">열화상 카메라 번호</option>
+                                                <option value="">열화상 카메라 이름</option>
+                                                <option value="">열화상 카메라 모델명</option>
+                                                <option value="">열화상 카메라 IP</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-9">
+                                            <label for="" class="sr-only">검색어</label>
+                                            <input id="" class="form-control" type="text" placeholder="검색어를 입력해 주세요">
+                                        </div>
+                                    </div>
+                                    <div class="form-row col-5">
+                                        <div class="form-group col-5">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon2">
+                                                        <i class="bi bi-calendar4-week"></i>
+                                                    </span>
+                                                </div>
+                                                <label for="datetimepicker1" class="sr-only">시작일</label>
+                                                <input id="datetimepicker1" class="form-control" type="text" placeholder="시작일">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-5">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon2">
+                                                        <i class="bi bi-calendar4-week"></i>
+                                                    </span>
+                                                </div>
+                                                <label for="datetimepicker1" class="sr-only">종료일</label>
+                                                <input id="datetimepicker1" class="form-control" type="text" placeholder="종료일">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-2">
+                                            <button type="button" class="btn btn-dark" id="">검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- table content -->
+                    <div class="table-wrapper">
+                        <div class="table-top-info">
+                            <div class="count">총 <b>123</b> 건</div>
+                            <div class="btn-group">
+                                <a role="button" class="btn btn-danger" id="" data-toggle="modal" data-target="#deleteModalCamera">삭제</a>
+                                <a role="button" class="btn btn-primary" id="" data-toggle="modal" data-target="#applyModalCamera">등록</a>
+                            </div>
+                        </div>
+                        <table id="example" class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="no-sort" style="width: 3%;">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Allcheck">
+                                            <label class="custom-control-label" for="Allcheck"></label>
+                                        </div>
+                                    </th>
+                                    <th style="width: 5%;">순번</th>
+                                    <th>열화상 카메라 번호</th>
+                                    <th>열화상 카메라 이름</th>
+                                    <th>열화상 카메라 모델명</th>
+                                    <th>열화상 카메라 IP</th>
+                                    <th>등록일</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>5</td>
+                                    <td>001</td>
+                                    <td>카메라A</td>
+                                    <td>CAM_N1_C001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalCamera">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalCamera">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>4</td>
+                                    <td>001</td>
+                                    <td>카메라A</td>
+                                    <td>CAM_N1_C001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalCamera">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalCamera">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>3</td>
+                                    <td>001</td>
+                                    <td>카메라A</td>
+                                    <td>CAM_N1_C001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalCamera">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalCamera">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>2</td>
+                                    <td>001</td>
+                                    <td>카메라A</td>
+                                    <td>CAM_N1_C001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalCamera">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalCamera">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-sort">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check1">
+                                            <label class="custom-control-label" for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td>001</td>
+                                    <td>카메라A</td>
+                                    <td>CAM_N1_C001</td>
+                                    <td>00-00-00-00</td>
+                                    <td>2024-02-13</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-outline-danger" id="" data-toggle="modal" data-target="#deleteModalCamera">삭제</a>
+                                        <a role="button" class="btn btn-xs btn-outline-primary" id="" data-toggle="modal" data-target="#applyModalCamera">수정</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <!-- No data -->
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8" class="text-center">데이터가 없습니다.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.table content -->
+                </div>
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Modal: 배전함 관리 -->
+        <div class="modal fade" id="applyModalBox" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">배전함 등록/수정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="text-left">
+                            <div class="form-group mb-4">
+                                <label for="">배전함 번호</label>
+                                <input type="text" class="form-control" placeholder="번호를 입력해 주세요.">
+                                <div class="invalid-feedback" style="display: block;">
+                                    번호를 입력해 주세요
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="">배전함 모델명</label>
+                                <input type="text" class="form-control" placeholder="모델명을 입력해 주세요.">
+                                <div class="invalid-feedback" style="display: block;">
+                                    모델명을 입력해 주세요
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-control-label mb-2">배전함 제어 설정</div>
+                                <input type="checkbox" id="toggle" class="toggleCheckbox" checked>
+                                <label for="toggle" class='toggleContainer'>
+                                    <span>수동열림</span>   
+                                    <span>자동열림</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <a role="button" class="btn btn-primary px-4" href="#">등록/수정</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="deleteModalBox" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">배전함 정보 삭제</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="bi bi-exclamation-triangle-fill fa-5x text-danger"></i>
+                        <p>선택하신 배전함 정보를 삭제합니다.<br>
+                            정말 삭제하시겠습니까?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                    <a role="button" class="btn btn-danger px-4" href="#">네</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./Modal: 배전함 관리 -->
+        <!-- Modal: 터치패널 관리 -->
+        <div class="modal fade" id="applyModalPanel" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">터치패널 등록/수정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="text-left">
+                            <div class="form-group mb-4">
+                                <label for="">터치패널 번호</label>
+                                <input type="text" class="form-control" placeholder="번호를 입력해 주세요.">
+                                <div class="invalid-feedback" style="display: block;">
+                                    번호를 입력해 주세요
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="">터치패널 모델명</label>
+                                <input type="text" class="form-control" placeholder="모델명을 입력해 주세요.">
+                                <div class="invalid-feedback" style="display: block;">
+                                    모델명을 입력해 주세요
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">열화상 카메라 IP</label>
+                                <input type="text" class="form-control" placeholder="‘-’없이 입력(8자리 숫자)" maxlength="8">
+                                <div class="invalid-feedback" style="display: block;">
+                                    IP를 입력해 주세요
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <a role="button" class="btn btn-primary px-4" href="#">등록/수정</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="deleteModalPanel" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">터치패널 정보 삭제</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="bi bi-exclamation-triangle-fill fa-5x text-danger"></i>
+                        <p>선택하신 터치패널 정보를 삭제합니다.<br>
+                            정말 삭제하시겠습니까?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                    <a role="button" class="btn btn-danger px-4" href="#">네</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./Modal: 배전함 관리 -->
+        <!-- Modal: 열화상 카메라 관리 -->
+        <div class="modal fade" id="applyModalCamera" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">열화상 카메라 등록/수정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="text-left">
+                            <div class="form-group mb-4">
+                                <label for="">열화상 카메라 번호</label>
+                                <input type="text" class="form-control" placeholder="번호를 입력해 주세요.">
+                                <div class="invalid-feedback" style="display: block;">
+                                    번호를 입력해 주세요
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="">열화상 카메라 이름</label>
+                                <input type="text" class="form-control" placeholder="이름을 입력해 주세요.">
+                                <div class="invalid-feedback" style="display: block;">
+                                    이름을 입력해 주세요
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="">열화상 카메라 모델명</label>
+                                <input type="text" class="form-control" placeholder="모델명을 입력해 주세요.">
+                                <div class="invalid-feedback" style="display: block;">
+                                    모델명을 입력해 주세요
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">열화상 카메라 IP</label>
+                                <input type="text" class="form-control" placeholder="‘-’없이 입력(8자리 숫자)" maxlength="8">
+                                <div class="invalid-feedback" style="display: block;">
+                                    IP를 입력해 주세요
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <a role="button" class="btn btn-primary px-4" href="#">등록/수정</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="deleteModalCamera" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">열화상 카메라 정보 삭제</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="bi bi-exclamation-triangle-fill fa-5x text-danger"></i>
+                        <p>선택하신 열화상 카메라 정보를 삭제합니다.<br>
+                            정말 삭제하시겠습니까?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                    <a role="button" class="btn btn-danger px-4" href="#">네</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./Modal: 열화상 카메라 관리 -->
+    </main>
+    <!-- ./wrapper -->
+    <footer class="footer mt-auto py-3">
+        <div class="d-flex justify-content-end">
+            Copyright ⓒ 2024 <a href="http://www.bow-tech.co.kr/" target="_blank"> BTONE</a>.  All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JS Core -->
+    <script src="assets/js/jquery@3.5.1/jquery.min.js"></script>
+    <script src="assets/js/popper.js@1.16.1/popper.min.js"></script>
+    <script src="assets/js/moment.js@2.21.0/moment.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendors/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Datatable JS -->
+    <script src="assets/vendors/dataTables-2.0.2/js/dataTables.min.js"></script>
+    <script src="assets/vendors/dataTables-2.0.2/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/custom.js"></script>    
+    
+</body>
+
+</html>
