@@ -233,11 +233,20 @@ img {
   color: #fff;
 }
 /* for custom checkbox in datatable*/
+input[type='checkbox'] {
+  accent-color: #5A8DEE;
+}
 .custom-control {  
   padding-left: 1.85rem;
 }
-input[type='checkbox'] {
-  accent-color: #5A8DEE;
+.custom-control-label::before {
+  border-color: #616b91;
+  background-color: #495279;
+}
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-color: #5A8DEE;
+  background-color: #5A8DEE;
 }
 
 .input-group-text {
@@ -943,11 +952,13 @@ left:unset;
 }
 
 .event-group.y-scroll {
+  width: 360px;
   height: 720px;
   padding: 1.5rem 1rem;
+  overflow-y: scroll;
 }
 .toast-group.dark .toast {
-  width: 303px;
+  width: 323px;
   background-color: #313959;
 }
 .toast-group.dark .toast button.close {
@@ -1308,22 +1319,47 @@ left:unset;
   text-align: left !important;
 }
 
+/* page printed in a modal */
+
 @page {
   size: A4;
   margin: 0;
 }
-@media print{
+@media screen {
+  #printSection {
+      display: none;
+  }
+}
+@media print {
+  html, body {
+    height:100vh; 
+    margin: 0 !important; 
+    padding: 0 !important;
+    overflow: hidden;
+  }
   body * {
-    visibility: hidden;
+    visibility:hidden;
   }
-  #page, #page * {
-    visibility: visible;
+  #printSection, #printSection * {
+    visibility:visible;
   }
-  #page {
-    position: absolute;
-    top: 0;
-    left: 0;
+  #printSection {
+    position:absolute;
+    left:0;
+    top:0;
     width: 100%;
     height: 100%;
+  }
+  .report-container,
+  .report-header h1,
+  .report-header .table tbody th,
+  .report-header .table tbody td,
+  .report-body .table tbody th,
+  .report-body .table tbody td {
+    background-color: transparent;
+    color: #000;
+  }
+  .report-container .table {
+    border-color: #000;
   }
 }
