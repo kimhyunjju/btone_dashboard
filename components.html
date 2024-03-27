@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="중대산업재해 활선사고 관련 작업자 안전예방장치 개발">
+    <meta name="author" content="(주)비티원(BTONE)">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>안전재해예방 원격 모니터링 시스템</title>
+
+    <!-- Bootstrap core -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+
+    <!-- Custom styles -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style="padding: 1rem 10rem;">
+        <h2 class="pt-3 mb-3">Components</h2>
+
+        <div class="component-groups mb-5">
+            <h3 class="">Breadcrumb</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a class="" href="index.html">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="">Home</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a class="" href="#">
+                    depth1
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    current page
+                </li>
+            </ol>
+        </div>
+        <div class="component-groups mb-5">
+            <h3 class="">Status images</h3>
+            <!-- 안전(휴전) icon image -->
+            <img src="assets/img/distribution-box-safety.png" alt="distribution box icon">
+            <!-- 위험(활선) icon image -->
+            <img src="assets/img/distribution-box-danger.png" alt="distribution box icon">
+        </div>
+        <div class="component-groups mb-5">
+            <h3 class="">Badges</h3>
+            <div class="d-flex badge-lg-group">
+            <div class="badge badge-danger">badge</div>
+            <div class="badge badge-success">badge</div>
+            <div class="badge badge-muted">badge</div>
+            </div>
+        </div>
+        <div class="component-groups mb-5">
+            <h3 class="">Buttons</h3>
+            <button type="button" class="btn btn-primary">button</button>
+            <button type="button" class="btn btn-danger">button</button>
+            <button type="button" class="btn btn-dark">button</button>
+            <button type="button" class="btn btn-outline-primary">button</button>
+            <button type="button" class="btn btn-outline-danger">button</button>
+            <a href="#" class="btn btn-link">button</a>
+        </div>
+        <div class="component-groups mb-5">
+            <h3 class="">Forms</h3>
+            <h4>Input fields</h4>
+            <form>
+            <div class="form-group">
+                <label for="label1">label text</label>
+                <input type="text" class="form-control" id="label1">
+                <div class="invalid-feedback" style="display: block;">
+                invalid text
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="label2" class="sr-only">without label text</label>
+                <input type="text" class="form-control" id="label2" placeholder="default">
+                <div class="invalid-feedback" style="display: none;">
+                invalid text
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="label2" class="sr-only">focused</label>
+                <input type="text" class="form-control focus" id="label2" placeholder="focused">
+                <div class="invalid-feedback" style="display: none;">
+                invalid text
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="label2" class="sr-only">without label text</label>
+                <input type="text" class="form-control" id="label2" value="disabled & readonly" disabled>
+                <div class="invalid-feedback" style="display: none;">
+                invalid text
+                </div>
+            </div>
+            </form>
+            <div class="mb-4">
+            <h4>Checkbox & Radio</h4>
+            <div class="checkbox-group">
+                <div class="checkbox mb-2">
+                    <label class="checkbox-block" for="checkItem1">
+                        <input type="checkbox" class="checkbox-input" id="checkItem1" >
+                        <span class="checkbox-card">
+                            <span class="checkbox-label">
+                                include checkbox label
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">checkbox</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">radio</label>
+            </div>
+            </div>
+            <div class="mb-4">
+            <h4 class="">Switches</h4>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffswitch" checked>
+                    <label class="onoffswitch-label" for="onoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex mb-2">
+                <input type="checkbox" id="toggle" class="toggleCheckbox" checked>
+                <label for="toggle" class="toggleContainer">
+                    <span>수동</span>   
+                    <span>자동</span>
+                </label>
+            </div>
+            <div class="d-flex">
+                <input type="checkbox" id="toggleSmall" class="toggleCheckbox" checked>
+                <label for="toggleSmall" class="toggleContainer small">
+                    <span>수동</span>   
+                    <span>자동</span>
+                </label>
+            </div>
+            </div>
+        </div>
+        <div class="component-groups mb-5">
+            <h3 class="">Modals</h3>
+            <div class="d-flex bd-example-modal">
+                <!-- default modal -->
+                <div class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="bi bi-x" aria-hidden="true"></i>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center py-3">
+                                    Modal body text goes here.
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-primary">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ End default modal -->
+                <!-- Begin without header modal -->
+                <div class="modal" id="test" tabindex="-1">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content without-header">
+                            <div class="modal-body">
+                                <div class="text-center">
+                                    {저장} 되었습니다.
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ End without header modal -->
+            </div>
+        </div>
+        <div class="component-groups mb-5">
+            <h3 class="">Toasts</h3>
+            <div class="toast-container">
+                <div class="toast toast-danger fade show" data-autohide="false">
+                    <div class="toast-header">
+                        <div class="title mr-auto">화재신호가 감지 되었습니다.</div>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">×</button>
+                    </div>
+                    <div class="toast-body">
+                        <div class="location">
+                            <span>1구역</span>
+                            <span>LBS-NO001</span>
+                        </div>
+                        <span class="text-muted">1분 전</span>
+                    </div>
+                </div>
+                <div class="toast toast-info fade show" data-autohide="false">
+                    <div class="toast-header">
+                        <div class="title mr-auto">네트워크 신호가 해제되었습니다.</div>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">×</button>
+                    </div>
+                    <div class="toast-body">
+                        <div class="location">
+                            <span>1구역</span>
+                            <span>LBS-NO001</span>
+                        </div>
+                        <span class="text-muted">1분 전</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
