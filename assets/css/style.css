@@ -208,6 +208,7 @@ img {
   text-align: center !important;
   vertical-align: middle !important;
   border-color: #474d63 !important;
+  color: #fff !important;
 }
 .table tbody th, .table tbody td, .table tfoot td {
   font-weight: normal;
@@ -217,7 +218,7 @@ img {
   color: #8A99B5;
 }
 .table tbody tr:hover {
-  color: #dde9ff;
+  color: #fff;
   background-color: #131929;
 }
 .table tbody td .btn-link {
@@ -504,12 +505,13 @@ input[type="checkbox"] {
   margin-bottom: 0px;
   background-color: transparent;
 }
+.breadcrumb-item a,
 .breadcrumb-item.active {
-  color: #dde9ff;
+  color: #fff;
   font-weight: normal;
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  color: #8A99B5;
+  color: #fff;
 }
 
 /*--------------------- Navbar ---------------------*/ 
@@ -575,7 +577,7 @@ input[type="checkbox"] {
 }
 .notification .toast-label {
   font-weight: 700;
-  color: #dde9ff;
+  color: #fff;
 }
 .notification .no-msg {
   height: 420px;
@@ -611,14 +613,16 @@ input[type="checkbox"] {
 .toast:not(:last-child) {
   margin-bottom: 0.25rem;
 }
-
 .toast.toast-info {
   border-left: 5px solid #39da8a;
 }
 .toast.toast-danger {
   border-left: 5px solid #f64e60;
 }
-
+.toast-group.dark .toast-label {
+  color: #fff;
+  font-weight: 700;
+}
 
 /*--------------------- Pagination ---------------------*/
 .pagination {
@@ -634,7 +638,7 @@ input[type="checkbox"] {
   margin-left: 0;
   background-color: #333B55;
   border-color: #333B55;
-  color: #dde9ff;
+  color: #fff;
   
 }
 .page-item.disabled:hover .page-link {
@@ -693,11 +697,11 @@ input[type="checkbox"] {
 }
 .tabs-group .nav-tabs .nav-link {
   width: 100%;
-  padding: 1rem;
+  padding: .75rem;
   text-align: center;
   border-color: transparent;
   background-color: #131929;
-  color: #dde9ff;
+  color: #fff;
   font-size: 18px;
 }
 .tabs-group .nav-tabs .nav-link:focus,
@@ -706,9 +710,10 @@ input[type="checkbox"] {
   background-color: #1d2237;
 }
 .tabs-group .nav-tabs .nav-link.active {
-  color: #5A8DEE;
-  background-color: #1d2237;
-  border-color: #1d2237;
+  color: #fff;
+  background-color: #5A8DEE;
+  border-color: #5A8DEE;
+  border-radius: 4px 4px 0 0;
 }
 
 button.left, 
@@ -899,7 +904,7 @@ left:unset;
 }
 .list-style-disc .title {
   margin-right: 1.5rem;
-  color: #dde9ff;
+  color: #fff;
 }
 .page-top-form {
   margin-bottom: 2rem;
@@ -917,6 +922,7 @@ left:unset;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: .5rem;
+  color: #fff;
 }
 .table-top-info .btn-group {
   display: block;
