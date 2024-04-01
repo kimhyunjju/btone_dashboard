@@ -779,6 +779,11 @@ left:unset;
     max-width: 344px;
   }
 }
+@media (min-width: 1920px) {
+  .card-group .card {
+    max-width: 352px;
+  }
+}
 
 .card .card-img-top {
   width: 100%;
