@@ -1012,6 +1012,10 @@ left:unset;
   color: #F64E60;
   font-size: 1.25rem;
 }
+.status-header .label-muted {
+  color: #BDD1F8;
+  font-size: 1.25rem;
+}
 .status-header .label-model {
   color: #fff;
   font-size: 1.5rem;
