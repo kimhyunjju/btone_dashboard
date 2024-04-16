@@ -594,7 +594,7 @@ input[type="checkbox"] {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  z-index: 1000;
+  z-index: 1040;
 }
 .toast {
   width: 450px;
@@ -1377,13 +1377,13 @@ left:unset;
 }
 .report-header h1 {
   font-weight: 600;
-  color: #BDD1F8;
+  color: #fff;
 }
 .report-header .approval-line {
   width: 360px;
 }
 .report-container .table {
-  border: 2px solid #8A99B5
+  border: 2px solid #fff
 }
 .report-header .table tbody th {
   padding: 0.25rem;
@@ -1395,9 +1395,11 @@ left:unset;
 .report-body .table tbody td {
   text-align: left !important;
 }
+.report-footer {
+  color: #fff;
+}
 
 /* page printed in a modal */
-
 @page {
   size: A4;
   margin: 0;
@@ -1439,4 +1441,10 @@ left:unset;
   .report-container .table {
     border-color: #000;
   }
+}
+
+/* progress bar */
+.progress {
+  height: auto;
+  font-size: 1.25rem;
 }
