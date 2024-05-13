@@ -84,7 +84,11 @@ img {
 .list-style-disc {
   list-style: disc;
 }
-
+.disabled {
+  opacity: .4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
 
 /*--------------------- Colors & Fonts ---------------------*/ 
 .text-primary {
@@ -125,6 +129,9 @@ img {
   transform: translateY(3px);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
+.btn:disabled {
+  cursor: not-allowed !important;
+}
 .btn:active,
 .btn:focus {
   outline: 0 !important;
@@ -147,6 +154,7 @@ img {
   background-color: #566F9E;
   border-color: #566F9E;
   cursor: not-allowed;
+  transform: none;
 }
 .btn-secondary {
   color: #fff;
@@ -160,6 +168,14 @@ img {
   color: #fff;
   background-color: #677287;
   border-color: #677287;
+}
+.btn-secondary.disabled, 
+.btn-secondary:disabled {
+  color: #fff;
+  background-color: #5a6168;
+  border-color: #5a6168;
+  cursor: not-allowed;
+  transform: none;
 }
 .btn-outline-primary {
   color: #5A8DEE;
@@ -406,6 +422,10 @@ input[type="checkbox"] {
   -moz-user-select:none; 
   -ms-user-select: none;
   font-size: 16px;
+}
+.onoffswitch .onoffswitch-label.disabled {
+  opacity: .4;
+  cursor: not-allowed !important;
 }
 .onoffswitch-checkbox {
   display: none;
@@ -1032,7 +1052,7 @@ left:unset;
 }
 .onoff-condition {
   text-align: right;
-  font-size: 14px;
+  font-size: 16px;
 }
 .onoff-condition span {
   display: block;

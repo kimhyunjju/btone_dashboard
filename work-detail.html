@@ -213,7 +213,7 @@
                                         <i class="bi bi-power"></i> 강제종료
                                     </button>
                                     <!-- status : 작업종료 후 보고서 버튼 표시 -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewReport">
+                                    <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#viewReport">
                                         <i class="bi bi-file-earmark-text-fill"></i> 보고서
                                     </button>
                                 </div>
@@ -600,7 +600,7 @@
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <div class="onoffswitch">
                                                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffswitch" checked>
-                                                <label class="onoffswitch-label" for="onoffswitch">
+                                                <label class="onoffswitch-label disabled" for="onoffswitch"><!--remove class: .disabled -->
                                                     <span class="onoffswitch-inner"></span>
                                                     <span class="onoffswitch-switch"></span>
                                                 </label>
@@ -612,10 +612,10 @@
                                         </div>
                                     </form>
                                     <div class="btn-group w-100">
-                                        <button type="button" class="btn btn-secondary">
+                                        <button type="button" class="btn btn-secondary disabled"><!--remove class: .disabled -->
                                             <i class="bi bi-lock-fill"></i> 문닫힘 전송
                                         </button>
-                                        <button type="button" class="btn btn-secondary">
+                                        <button type="button" class="btn btn-primary">
                                             <i class="bi bi-unlock-fill"></i> 문열림 전송
                                         </button>
                                     </div>
@@ -665,7 +665,7 @@
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="form-control-label" style="line-height: 1;">안전장구<br>승인 설정</div>
                                                         <input type="checkbox" id="toggle" class="toggleCheckbox" checked>
-                                                        <label for="toggle" class="toggleContainer small">
+                                                        <label for="toggle" class="toggleContainer small disabled"><!--remove class: .disabled -->
                                                             <span>수동</span>   
                                                             <span>자동</span>
                                                         </label>
