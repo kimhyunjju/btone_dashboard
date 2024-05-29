@@ -774,7 +774,7 @@ button.right {
   justify-content: center;
   align-items: center;
   background-color:#1d2237;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   border-radius: 4px;
   border:none;
   color: #FFF;
@@ -815,34 +815,30 @@ left:unset;
 }
 .card-group {
   position: relative;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+  grid-template-rows: 1fr;
   overflow-x: hidden;
 }
 .card-group .card {
   flex: 1 1 auto;
   position: relative;
-  max-width: 324px;
-  width: 19%;
-  height: 234px;
+  max-width: 890px;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   transition: all 0.3s;
+  aspect-ratio: 4 / 3;
+  border-radius: 0 !important;
 }
 .card-group .card:hover{
-  border: 8px solid;
+  border: 10px solid;
   border-image: linear-gradient(45deg, #007bff, #a8ff23) 1;
-  transform: translate3d(-4px, -4px);
 }
 
-@media (min-width: 1840px) {
-  .card-group .card {
-    max-width: 344px;
-  }
-}
-@media (min-width: 1920px) {
-  .card-group .card {
-    max-width: 352px;
-  }
-}
+
+
 .card .card-img-top {
   width: 100%;
   height: 100%;
@@ -902,8 +898,8 @@ left:unset;
 }
 
 .card .overlay .badge {
-  padding: 0.5rem 0.75rem;
-  font-size: 14px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #fff;
   border-radius: 50px;
@@ -1541,28 +1537,31 @@ left:unset;
   background-color: #39DA8A !important;
   background-image: linear-gradient(90deg, #39DA8A, #85fd55);
 }
+.bg-muted {
+  background-color: #BDD1F8 !important;
+  background-image: linear-gradient(90deg, #8A99B5, #BDD1F8);
+}
 .animated {
-  height: 60px;
-  width: 60px;
   position: absolute;
-  top: -7px;
-  left: 66px;
+  top: -76px;
+  left: 36px;
+  width: 100px;
+  height: auto;
+  padding: 14px 14px 0;
+  border-radius: 20px 20px 0 0;
   text-align: center;
-  margin:-30px 0 0 -30px;
-  border-radius: 50px 50px 0 0;
-  padding: 12px 8px 0;
   z-index: 900;
 }
 .animated .ripple{
   position:absolute;
-  width:160px;
-  height:160px;
-  z-index:-1;
   left:50%;
   top:50%;
-  opacity:0;
-  margin:-80px 0 0 -80px;
+  width: 200px;
+  height: 200px;
+  margin:-100px 0 0 -100px;
   border-radius:100px;
+  opacity:0;
+  z-index:-1;
   -webkit-animation:ripple 1.8s infinite;
   animation:ripple 1.8s infinite
 }
@@ -1606,4 +1605,8 @@ left:unset;
     transform: scale(0.9);
     box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
   }
+}
+.animated.bg-muted  .animated-icon,
+.animated.bg-muted  .ripple {
+  animation: none;
 }
