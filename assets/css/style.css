@@ -1037,14 +1037,31 @@ left:unset;
 }
 
 .status-header {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  padding-bottom: 0.65rem;
+  position: relative;
+  height: 185px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-.status-header .info-group {
-  padding: 1rem;
-  line-height: 1.2;
+.status-header .me-auto {
+  padding: 50px 0 50px 180px;
+}
+.status-header .me-auto .badge {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 50px;
+}
+.status-header .me-auto .animated {
+  top: 15px;
+  left: 18px;
+  width: 140px;
+  border-radius: 20px;
+}
+.status-header .me-auto .animated img {
+  width: 100%;
+  object-fit: cover;
 }
 .onoff-condition {
   text-align: right;
@@ -1054,11 +1071,6 @@ left:unset;
   display: block;
 }
 @media (min-width: 1514px) {
-  .status-header {
-    display: block;
-    text-align: center;
-    padding: 0.65rem;
-  }
   .onoff-condition {
     text-align: left;
   }
@@ -1066,23 +1078,6 @@ left:unset;
     display: inline-block;
     font-size: 16px;
   }
-}
-.status-header .label-safety {
-  color: #39DA8A;
-  font-size: 1.25rem;
-}
-.status-header .label-danger {
-  color: #F64E60;
-  font-size: 1.25rem;
-}
-.status-header .label-muted {
-  color: #BDD1F8;
-  font-size: 1.25rem;
-}
-.status-header .label-model {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 700;
 }
 
 .event-group.y-scroll {
