@@ -417,7 +417,7 @@ input[type="checkbox"] {
 /* on&off checkbox style */
 .onoffswitch {
   position: relative;
-  width: 100px;
+  width: 150px;
   -webkit-user-select:none; 
   -moz-user-select:none; 
   -ms-user-select: none;
@@ -434,7 +434,7 @@ input[type="checkbox"] {
   display: block; 
   overflow: hidden; 
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 20px;
   margin-bottom: 0;
 }
 .onoffswitch-inner {
@@ -442,34 +442,37 @@ input[type="checkbox"] {
   width: 200%; 
   margin-left: -100%;
   transition: margin 0.3s ease-in 0s;
+  font-size: 1.65rem;
 }
 .onoffswitch-inner:before, 
 .onoffswitch-inner:after {
   display: block; 
   float: left; 
   width: 50%; 
-  padding: 11px 16px 9px;
+  padding: 24px 25px 24px;
   color: white;
 }
 .onoffswitch-inner:before {
   content: "문열림";
-  background-color: #007AFF; 
+  background-color: #39DA8A !important;
+  background-image: linear-gradient(60deg, #85fd55, #39DA8A);
   color: #FFF;
 }
 .onoffswitch-inner:after {
   content: "문닫힘";
-  background-color: #8A99B5; 
+  background-color: #5a8dee;
+  background-image: linear-gradient(60deg, #91a6df, #5a8dee);
   color: #FFF;
   text-align: right;
 }
 .onoffswitch-switch {
   display: block; 
-  width: 25px;
-  height: 25px;
-  margin: 9px;
+  width: 30px;
+  height: 30px;
+  margin: 26px;
   background: #FFF;
   position: absolute;
-  right: 57px;
+  right: 80px;
   border-radius: 50px;
   box-shadow: 0 .3rem .25rem rgba(0,0,0,.2);
   transition: all 0.3s ease-in 0s; 
@@ -478,7 +481,7 @@ input[type="checkbox"] {
   margin-left: 0;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0; 
+  right: -10px; 
 }
 
 
@@ -1038,13 +1041,13 @@ left:unset;
 
 .status-header {
   position: relative;
-  height: 185px;
+  top: -10px;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
 }
 .status-header .me-auto {
-  padding: 50px 0 50px 180px;
+  padding: 44px 0 44px 180px;
 }
 .status-header .me-auto .badge {
   padding: 0.75rem 1.25rem;
@@ -1062,22 +1065,6 @@ left:unset;
 .status-header .me-auto .animated img {
   width: 100%;
   object-fit: cover;
-}
-.onoff-condition {
-  text-align: right;
-  font-size: 16px;
-}
-.onoff-condition span {
-  display: block;
-}
-@media (min-width: 1514px) {
-  .onoff-condition {
-    text-align: left;
-  }
-  .onoff-condition span {
-    display: inline-block;
-    font-size: 16px;
-  }
 }
 
 .event-group.y-scroll {
@@ -1099,10 +1086,10 @@ left:unset;
   color: #8A99B5 !important;
 }
 .card .card-body.card-panel-right {
-  padding: 1rem !important;
+  padding: 1.5rem;
 }
 .card-panel-right .btn-group .btn {
-  padding: .75rem .5rem;
+  padding: .75rem 1rem;
 }
 .card-panel-right .btn-group .btn + .btn {
   margin-left: .25rem;
@@ -1113,12 +1100,15 @@ left:unset;
 .card-panel-right .btn-group .btn:last-child {
   border-radius: 5px 50px 50px 5px;
 }
-@media (min-width: 1514px) {
+@media (max-width: 1820px) {
+  .card .card-body.card-panel-right .card-body .d-flex.justify-content-between {
+    flex-direction: column;
+  }
   .card .card-body.card-panel-right {
-    padding: 1.5rem;
+    padding: 1rem !important;
   }
   .card-panel-right .btn-group .btn {
-    padding: .75rem 1rem;
+    padding: .75rem .5rem;
   }
 }
 
@@ -1238,14 +1228,15 @@ left:unset;
   height: auto;
 }
 .bottom-info .tab-content .form-control-label>br {
-  display: block;
+  display: none;
 }
-@media (min-width: 1514px) {
+@media (max-width: 1820px) {
   .bottom-info .tab-content {
-    height: 228px;
+    height: 175px;
+    overflow-y: scroll;
   }
-  .bottom-info .tab-content .form-control-label>br {
-    display: none;
+  .bottom-info .tab-content .form-control-label {
+    margin-bottom: 10px;
   }
 }
 
@@ -1290,9 +1281,9 @@ left:unset;
 
 .profile-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding: .65rem 0;
+  padding: .5rem 0;
   border-bottom: 1px solid #464d6a;
 }
 .profile-list:last-child {
@@ -1308,15 +1299,16 @@ left:unset;
   font-size: 15px;
   color: #fff;
 }
-@media (min-width: 1514px) {
+@media (max-width: 1820px) {
   .profile-list {
-    flex-direction: row;
-    padding: .5rem 0;
+    flex-direction: column;
+    padding: .65rem 0;
+  }
+  .profile-list .btn {
+    width: 100%;
   }
 }
 .item-group {
-  height: 235px;
-  overflow-y: scroll;
 }
 .item-group li {
   padding: 0.5rem 0 0.5rem 1.25rem;
