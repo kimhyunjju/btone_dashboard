@@ -102,17 +102,15 @@ img {
 }
 .fs-24 {
   /* font-size: 24px; */
-  font-size: 1.75rem;
+  font-size: 1.75rem !important;
 }
 .fs-20 {
   /* font-size: 20px; */
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
 }
-
 .fw-bold {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
-
 
 /*--------------------- Buttons ---------------------*/ 
 .btn {
@@ -512,7 +510,10 @@ input[type="checkbox"] {
   font-size: 1rem;
   justify-content: center;
 }
-
+.modal-xl {
+  min-width: 1140px;
+  width: 1140px;
+}
 .bd-example-modal .modal {
   position: relative;
   top: auto;
@@ -1418,10 +1419,19 @@ left:unset;
 
 /*--------------------- Report  ---------------------*/ 
 .report-container {
-  padding: 5rem 3rem;
+  padding: 3rem;
   background-color: #1d2237;
 }
-
+.report-container .form-control {
+  height: auto;
+  padding: .25rem;
+}
+.report-container .form-control-label {
+  margin-bottom: 0;
+}
+.report-container .table {
+  border: 2px solid #474d63;
+}
 .report-header {
   display: flex;
   justify-content: space-between;
@@ -1434,12 +1444,8 @@ left:unset;
 .report-header .approval-line {
   width: 360px;
 }
-.report-container .table {
-  border: 2px solid #fff
-}
 .report-header .table tbody th {
   padding: 0.25rem;
-  background-color: #313959 !important;
 }
 .report-header .table tbody td {
   height: 80px;
@@ -1447,8 +1453,16 @@ left:unset;
 .report-body .table tbody td {
   text-align: left !important;
 }
+.report-body .table .form-inline {
+  flex-wrap: nowrap;
+  text-align: center;
+}
 .report-footer {
   color: #fff;
+}
+.report-footer .form-group {
+  display: inline-block;
+  margin-bottom: 0;
 }
 
 /* page printed in a modal */
@@ -1458,7 +1472,7 @@ left:unset;
 }
 @media screen {
   #printSection {
-      display: none;
+    display: none;
   }
 }
 @media print {
@@ -1481,17 +1495,17 @@ left:unset;
     width: 100%;
     height: 100%;
   }
-  .report-container,
-  .report-header h1,
-  .report-header .table tbody th,
-  .report-header .table tbody td,
-  .report-body .table tbody th,
-  .report-body .table tbody td {
+  .report-container *,
+  .report-container .form-control {
+    border-color: white;
     background-color: transparent;
-    color: #000;
+    color: #000 !important;
   }
   .report-container .table {
     border-color: #000;
+  }
+  .report-container .form-control::placeholder {
+    color: transparent;
   }
 }
 

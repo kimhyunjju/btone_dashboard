@@ -213,7 +213,7 @@
                                         <i class="bi bi-power"></i> 강제종료
                                     </button>
                                     <!-- status : 작업종료 후 보고서 버튼 표시 -->
-                                    <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#viewReport">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewReport">
                                         <i class="bi bi-file-earmark-text-fill"></i> 보고서
                                     </button>
                                 </div>
@@ -932,119 +932,252 @@
                     </div>
                     <div class="modal-body">
                         <div id="printThis" class="report-container">
-                            <div class="report-header">
-                                <h1>장비점검 결과 보고서</h1>
-                                <div class="approval-line">
+                            <form action="">
+                                <div class="report-header">
+                                    <h1>장비점검 결과 보고서</h1>
+                                    <div class="approval-line">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col style="width:25%;" />
+                                                <col style="width:25%;" />
+                                                <col style="width:25%;" />
+                                                <col style="width:25%;" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        <span>담당</span>
+                                                    </th>
+                                                    <th class="form-group">
+                                                        <label for="" class="sr-only">직책</label>
+                                                        <input id="" class="form-control text-center" type="text">
+                                                    </th>
+                                                    <th class="form-group">
+                                                        <label for="" class="sr-only">직책</label>
+                                                        <input id="" class="form-control text-center" type="text">
+                                                    </th>
+                                                    <th class="form-group">
+                                                        <label for="" class="sr-only">직책</label>
+                                                        <input id="" class="form-control text-center" type="text">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="report-body">
                                     <table class="table table-bordered">
                                         <colgroup>
-                                            <col style="width:25%;" />
-                                            <col style="width:25%;" />
-                                            <col style="width:25%;" />
-                                            <col style="width:25%;" />
+                                            <col style="width:15%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:15%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:20%;" />
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th>담당</th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
+                                                <th>
+                                                    <label for="" class="form-control-label">작업 No.</label>
+                                                </th>
+                                                <td colspan="3" class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">구      분</label>
+                                                </th>
+                                                <td colspan="4" class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th>
+                                                    <label for="" class="form-control-label">배전함 번호</label>
+                                                </th>
+                                                <td colspan="3" class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">배전함명</label>
+                                                </th>
+                                                <td colspan="4" class="form-group">
+                                                    <span class="id">LBS-NO001</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label for="" class="form-control-label">작업위치</label>
+                                                </th>
+                                                <td colspan="3" class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">관리자</label>
+                                                </th>
+                                                <td colspan="4" class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label for="" class="form-control-label">점검일자</label>
+                                                </th>
+                                                <td colspan="3" class="form-group">
+                                                    <div class="form-inline">
+                                                        <input id="" class="form-control text-right" type="number"style="width:80px;">
+                                                        <label for="" class="form-control-label ml-1 mr-3">년</label>
+                                                        <input id="" class="form-control text-right" type="number" style="width:50px;">
+                                                        <label for="" class="form-control-label ml-1 mr-3">월</label>
+                                                        <input id="" class="form-control text-right" type="number" style="width:50px;">
+                                                        <label for="" class="form-control-label ml-1">일</label>
+                                                    </div>
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">점검시간</label>
+                                                </th>
+                                                <td colspan="4" class="form-group">
+                                                    <div class="form-inline justify-content-center">
+                                                        <input id="" class="form-control text-right" type="number" style="width:40px;">
+                                                        <label for="" class="form-control-label mr-2">시</label>
+                                                        <input id="" class="form-control text-right" type="number" style="width:40px;">
+                                                        <label for="" class="form-control-label">분</label>
+                                                        <span class="px-2">-</span>
+                                                        <input id="" class="form-control text-right" type="number" style="width:40px;">
+                                                        <label for="" class="form-control-label mr-2">시</label>
+                                                        <input id="" class="form-control text-right" type="number" style="width:40px;">
+                                                        <label for="" class="form-control-label">분</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <span>작업자 1</span>
+                                                </th>
+                                                <th>
+                                                    <label for="" class="form-control-label">이름</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">소속</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">연락처</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="number" maxlength="11" placeholder="'-'없이 숫자만 입력">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <span>작업자 2</span>
+                                                </th>
+                                                <th>
+                                                    <label for="" class="form-control-label">이름</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">소속</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">연락처</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="number" maxlength="11" placeholder="'-'없이 숫자만 입력">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <span>작업자 3</span>
+                                                </th>
+                                                <th>
+                                                    <label for="" class="form-control-label">이름</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">소속</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="text">
+                                                </td>
+                                                <th>
+                                                    <label for="" class="form-control-label">연락처</label>
+                                                </th>
+                                                <td class="form-group">
+                                                    <input id="" class="form-control" type="number" maxlength="11" placeholder="'-'없이 숫자만 입력">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label for="" class="form-control-label">점검내용</label>
+                                                </th>
+                                                <td colspan="6" class="form-group">
+                                                    <textarea id="" class="form-control" rows="9"></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label for="" class="form-control-label">점검결과</label>
+                                                </th>
+                                                <td colspan="6" class="form-group" style="height: 100px;">
+                                                    <textarea id="" class="form-control" rows="3"></textarea>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                            <div class="report-body">
-                                <table class="table table-bordered">
-                                    <colgroup>
-                                        <col style="width:15%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:20%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:15%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:20%;" />
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th>작업 No.</th>
-                                            <td colspan="3">MNG-20240227-001</td>
-                                            <th>구      분</th>
-                                            <td colspan="4">유지보수</td>
-                                        </tr>
-                                        <tr>
-                                            <th>배전함 번호</th>
-                                            <td colspan="3">001</td>
-                                            <th>배전함명</th>
-                                            <td colspan="4">LBS-NO001</td>
-                                        </tr>
-                                        <tr>
-                                            <th>작업위치</th>
-                                            <td colspan="3">1구역</td>
-                                            <th>관리자</th>
-                                            <td colspan="4">김관리</td>
-                                        </tr>
-                                        <tr>
-                                            <th>점검일자</th>
-                                            <td colspan="3">2024년 02월 29일</td>
-                                            <th>점검시간</th>
-                                            <td colspan="4">14:25-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <th>작업자 1</th>
-                                            <th>이름</th>
-                                            <td>김작업</td>
-                                            <th>소속</th>
-                                            <td>OO주식회사</td>
-                                            <th>연락처</th>
-                                            <td>010-0000-0000</td>
-                                        </tr>
-                                        <tr>
-                                            <th>작업자 2</th>
-                                            <th>이름</th>
-                                            <td>김작업</td>
-                                            <th>소속</th>
-                                            <td>OO주식회사</td>
-                                            <th>연락처</th>
-                                            <td>010-0000-0000</td>
-                                        </tr>
-                                        <tr>
-                                            <th>작업자 3</th>
-                                            <th>이름</th>
-                                            <td>-</td>
-                                            <th>소속</th>
-                                            <td>-</td>
-                                            <th>연락처</th>
-                                            <td>-</td>
-                                        </tr>
-                                        <tr>
-                                            <th>점검내용</th>
-                                            <td colspan="6" style="height: 300px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>점검결과</th>
-                                            <td colspan="6" style="height: 100px;"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="report-footer">
-                                <div class="text-center">
-                                    <p class="fs-20 py-3">위와 같이  <span class="underline">_____________</span> 장비에 대한 점검 결과를 보고합니다.</p>
-                                    <p class="fs-20 mb-5">2024년 02월 29일</p>
+                                <div class="report-footer">
+                                    <div class="text-center">
+                                        <div class="fs-20 py-3">위와 같이  
+                                            <span class="form-group">
+                                                <label for="" class="sr-only">점검 구분</label>
+                                                <input id="" class="form-control text-center fs-20" type="text" style="width: 200px;">
+                                            </span> 에 대한 점검 결과를 보고합니다.
+                                        </div>
+                                        <div class="form-group py-3">
+                                            <div class="form-inline justify-content-center">
+                                                <input id="" class="form-control text-right" type="number"style="width:80px;">
+                                                <label for="" class="form-control-label ml-1 mr-3">년</label>
+                                                <input id="" class="form-control text-right" type="number" style="width:50px;">
+                                                <label for="" class="form-control-label ml-1 mr-3">월</label>
+                                                <input id="" class="form-control text-right" type="number" style="width:50px;">
+                                                <label for="" class="form-control-label ml-1">일</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right mr-5">
+                                        보고자 :  
+                                        <span class="form-group">
+                                            <label for="" class="sr-only">보고자 서명</label>
+                                            <input id="" class="form-control text-center" type="text" style="width: 120px;">
+                                        </span>(인)
+                                    </div>
+                                    <div class="text-center">
+                                        <span class="form-group mt-2">
+                                            <label for="" class="sr-only">회사명</label>
+                                            <input id="" class="form-control fs-24 text-center" type="text" placeholder="회사명을 입력해주세요">
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    보고자 :  <span class="underline">_____________</span>(인)
-                                </div>
-                                <div class="text-center mt-5">
-                                    <h2>주식회사  ◯◯◯◯</h2>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <div class="modal-footer">
